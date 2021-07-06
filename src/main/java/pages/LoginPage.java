@@ -12,7 +12,6 @@ public class LoginPage {
     }
 
     // page locator
-
     @FindBy(xpath = "//*[@id=\"zocial-google\"]")
     WebElement googleLink;
 

@@ -6,10 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "/Users/duncan/IdeaProjects/Movercado/Features/cashout_requests.feature",
+        features = "/Users/duncan/IdeaProjects/movercado-frontend-tests/Features",
         glue = "stepsDefinition",
-        dryRun = false,
-        plugin = {"pretty","html:test-output"}
+        plugin = {"pretty", "html:target/cucumber-reports/cucumber.html"},
+        publish=true
 )
 public class TestRunner {
 }

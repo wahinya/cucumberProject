@@ -10,32 +10,35 @@ public class HomePage {
     public HomePage(WebDriver driver) {
         this.driver= driver;
     }
+
+    //message page locators
     @FindBy(xpath = "//*[@id=\"main-navbar-items\"]/ul[1]/li[2]/a")
     WebElement messagesLink;
-
     @FindBy(xpath = "/html/body/div/div[2]/div/div/div/a")
     WebElement newMessage;
-
-    @FindBy(xpath = "//*[@id=\"filter_message\"]")
-    WebElement messageSearchBox;
-
-    @FindBy(xpath = "//*[@id=\"message_search\"]/div[2]/div[3]/div/button")
-    WebElement searchButton;
-
     @FindBy(xpath = "/html/body/div/div[3]/table/tbody/tr[1]/td[2]")
     WebElement messageValue;
 
-    public void clickMessageLink(){
+    //transaction page locators
+    @FindBy(xpath = "//*[@id=\"main-navbar-items\"]/ul[1]/li[5]/a")
+    WebElement tikoLink;
+    @FindBy(xpath = "//*[@id=\"main-navbar-items\"]/ul[1]/li[5]/ul/li[6]/a")
+    WebElement transactionLink;
+    @FindBy(xpath = "/html/body/div/div[3]/a[1]")
+    WebElement newTransaction;
+
+    public void openNewMessagePage(){
       messagesLink.click();
       newMessage.click();
       MessagePage messagePage = new MessagePage(driver);
     }
-//    public void addSearchText(String message){
-//        messageSearchBox.sendKeys(message);
-//    }
-//    public void clickSearchButton(){
-//        searchButton.click();
-//    }
+    public void openNewTransactionPage(){
+        tikoLink.click();
+        transactionLink.click();
+        newTransaction.click();
+        TransactionPage transactionPage = new TransactionPage(driver);
+    }
+
     public String getActualMessage(){
         return messageValue.getText();
     }
