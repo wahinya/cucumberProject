@@ -44,6 +44,7 @@ public class Test_cash_out_requests extends BaseTest{
     @Then("A message as {string} is generated")
     public void a_success_message_as_is_generated(String message) {
         Assert.assertTrue(verifyMessage(message));
+        close_browser();
     }
     private boolean verifyMessage(String message) {
         homePage = PageFactory.initElements(driver, HomePage.class);
@@ -51,8 +52,7 @@ public class Test_cash_out_requests extends BaseTest{
         return actualMessage.equals(message);
     }
 
-    @Then("Close browser")
-    public void close_browser(){
+    private void close_browser(){
         driver.quit();
     }
 }

@@ -1,0 +1,11 @@
+Feature: cash_out request
+
+Scenario Outline: Validate result for a cash_out with a correct trigger and amount less minimum cash out amount
+Given User launch browser or mobile app
+When User logs into mvc with valid email and password
+And Send a message with transport as "<transport>" contact as "<contact>" and a trigger as "<trigger>"
+Then A message as "minimum amount you can cash out is 500" is generated
+
+Examples:
+|transport  |contact| trigger|
+|9999       |+254725146670|CASHREQUEST 300|
