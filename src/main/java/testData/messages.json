@@ -1,0 +1,38 @@
+{
+"message":[
+  {
+    "transport": "9999",
+    "contact": "+254725146670",
+    "trigger": "CASHREQUEST 1000",
+    "response": "cash out successful!"
+  },
+  {
+    "transport": "9999",
+    "contact": "+254725146670",
+    "trigger": "CASH 1000",
+    "response": "wrong trigger!"
+  },
+  {
+    "transport": "9999",
+    "contact": "+254725146670",
+    "trigger": "CASHREQUEST 300",
+    "response": "minimum amount you can cash out is 500"
+  },
+  {
+    "transport": "9999",
+    "contact": "+254725146670",
+    "trigger": "CASHREQUEST 1500",
+    "response": "amount after cash out should not be less than 1000"
+  },
+  {
+    "transport": "9999",
+    "contact": "+254725146670",
+    "trigger": "Pay 20"
+  },
+  {
+    "transport": "9999",
+    "contact": "+254725146670",
+    "trigger": "receive"
+  }
+]
+}

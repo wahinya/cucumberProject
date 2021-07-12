@@ -2,7 +2,7 @@ package stepsDefinition;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.support.PageFactory;
 import pages.RequestsPage;
-public class Test_download_cash_out_csv_files extends BaseTest{
+public class Test_download_cash_out extends BaseTest{
     RequestsPage requestsPage = null;
     @Then("Access the cash_out requests page")
     public void access_the_cash_out_requests_page() {

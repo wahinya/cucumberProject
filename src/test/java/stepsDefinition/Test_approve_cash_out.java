@@ -4,7 +4,7 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.support.PageFactory;
 import pages.RequestsPage;
 
-public class Test_cash_out_requests_approval extends BaseTest{
+public class Test_approve_cash_out extends BaseTest{
     RequestsPage requestsPage = null;
 
     @Then("Select cash out requests & approve")
