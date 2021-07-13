@@ -28,14 +28,14 @@ public class Test_request_cash_out extends BaseTest {
         loginPage.addEmail(config.getUsername(0));
         loginPage.addPassword(config.getPassword(0));
     }
-
-
+//    @Test
 //    public void cashOUTRequests() throws InterruptedException, IOException {
 //        homePage = PageFactory.initElements(driver, HomePage.class);
 //        messagePage = PageFactory.initElements(driver, MessagePage.class);
 //        homePage.openNewMessagePage();
 //        int index = config.messages().length();
-//        for(int i=0;i<index;++i) {
+//
+//        for (int i = 0; i < index; ++i) {
 //            messagePage.addTransport(config.getTransport(i));
 //            messagePage.addContact(config.getContact(i));
 //            messagePage.addTrigger(config.getTrigger(i));
@@ -98,14 +98,13 @@ public class Test_request_cash_out extends BaseTest {
         Assert.assertTrue(verifyMessage(config.getResponse(3)));
         close_browser();
     }
-
-    private boolean verifyMessage(String message) {
+    boolean verifyMessage(String message) {
         homePage = PageFactory.initElements(driver, HomePage.class);
         String actualMessage = homePage.getActualMessage();
         return actualMessage.equals(message);
     }
 
-    private void close_browser() {
+    void close_browser() {
         driver.quit();
     }
 }

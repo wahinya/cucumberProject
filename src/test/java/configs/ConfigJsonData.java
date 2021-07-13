@@ -61,6 +61,10 @@ public class ConfigJsonData {
         String messages = messages();
         JSONArray responseArray = JsonPath.read(messages, "$.message..response");
         return (String) responseArray.get(index);
-
     }
+//    public String getResponse2(int index) throws IOException {
+//        String messages = messages();
+//        JSONArray responseArray = JsonPath.read(messages, "$.message..response2");
+//        return (String) responseArray.get(index);
+//    }
 }

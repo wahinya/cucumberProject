@@ -26,13 +26,13 @@
   },
   {
     "transport": "9999",
-    "contact": "+254725146670",
-    "trigger": "Pay 20"
+    "contact": "+25425146670",
+    "trigger": "Pay 50"
   },
   {
     "transport": "9999",
-    "contact": "+254725146670",
-    "trigger": "receive"
+    "contact": "+254722827010",
+    "response": "400"
   }
 ]
 }
