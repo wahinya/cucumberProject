@@ -18,6 +18,8 @@ public class HomePage {
     WebElement newMessage;
     @FindBy(xpath = "/html/body/div/div[3]/table/tbody/tr[1]/td[2]")
     WebElement messageValue;
+    @FindBy(xpath = "/html/body/div/div[3]/table/tbody/tr[2]/td[2]")
+    WebElement messageValue2;
 
     //transaction page locators
     @FindBy(xpath = "//*[@id=\"main-navbar-items\"]/ul[1]/li[5]/a")
@@ -41,6 +43,10 @@ public class HomePage {
 
     public String getActualMessage(){
         return messageValue.getText();
+    }
+
+    public String getActualMessage2(){
+        return messageValue2.getText();
     }
 
 

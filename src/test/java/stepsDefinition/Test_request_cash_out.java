@@ -103,6 +103,11 @@ public class Test_request_cash_out extends BaseTest {
         String actualMessage = homePage.getActualMessage();
         return actualMessage.equals(message);
     }
+    boolean verifyMessage2(String message) {
+        homePage = PageFactory.initElements(driver, HomePage.class);
+        String actualMessage2 = homePage.getActualMessage2();
+        return actualMessage2.equals(message);
+    }
 
     void close_browser() {
         driver.quit();

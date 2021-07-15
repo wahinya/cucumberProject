@@ -42,12 +42,7 @@ public class Test_transactions extends BaseTest{
     }
     @When("Confirm that Rafiki balance reduce")
     public void checkTikoDecrease() throws IOException {
-        Assert.assertTrue(test_request_cash_out.verifyMessage(config.getResponse(4)));
+        Assert.assertTrue(test_request_cash_out.verifyMessage2(config.getResponse2(5)));
         test_request_cash_out.close_browser();
     }
-//    @When("Confirm that retailer balance increase")
-//    public void checkTikoIncrease() throws IOException {
-//        Assert.assertTrue(test_request_cash_out.verifyMessage(config.getResponse2(4)));
-//        test_request_cash_out.close_browser();
-//    }
 }

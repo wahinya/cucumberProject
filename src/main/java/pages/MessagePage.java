@@ -30,6 +30,10 @@ public class MessagePage {
     @FindBy(xpath = "/html/body/div/div[1]/div/div[1]")
     WebElement message;
 
+    @FindBy(xpath = "/html/body/div/div[3]/table/tbody/tr[1]/td[2]")
+    WebElement message2;
+
+
     // Locator methods
     public void addTransport(String transport) throws InterruptedException {
         transportField.sendKeys(transport);
@@ -47,8 +51,11 @@ public class MessagePage {
         cancelButton.click();
     }
     public String getMessage(){
-
         return message.getText();
     }
+    public String getMessage2(){
+        return message2.getText();
+    }
+
 
 }

@@ -1,5 +1,5 @@
-Feature: Person To Business Transaction
-  Scenario: Check result when a person purchase a from a stockist
+Feature: Person To Person Transaction
+  Scenario: Check result when a person send miles to another person
     Given User launch browser or mobile app
     When User logs into mvc with valid email and password
     Then Rafiki request a payment code
