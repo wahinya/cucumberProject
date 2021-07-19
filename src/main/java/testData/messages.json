@@ -58,17 +58,31 @@
   },
   {
     "transport": "9999",
-    "contact": "+25472222226",
+    "contact": "+25472222227",
     "trigger": "4",
     "response": "",
     "response2": ""
   },
   {
     "transport": "9999",
-    "contact": "+25472222226",
+    "contact": "+25472222227",
     "trigger": "no",
     "response": "",
     "response2":""
+  },
+  {
+    "transport": "9999",
+    "contact": "+25476666666",
+    "trigger": "Enrolment",
+    "response": "",
+    "response2": ""
+  },
+  {
+    "transport": "9999",
+    "contact": "+25476666667",
+    "trigger": "",
+    "response": "Success Message For Validator",
+    "response2": "Success Validation Message For Code Owner"
   }
 ]
 }
