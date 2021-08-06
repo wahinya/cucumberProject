@@ -4,6 +4,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.MessagePage;
@@ -45,6 +47,7 @@ public class Test_request_cash_out extends BaseTest {
 //            Assert.assertTrue(verifyMessage(config.getResponse(i)));
 //            homePage.openNewMessagePage();
 //        }
+//    }
 
     @When("Send a message with valid trigger and amount and validate")
     public void valid_trigger_amount() throws IOException, InterruptedException {
@@ -57,9 +60,9 @@ public class Test_request_cash_out extends BaseTest {
         messagePage.clickSave();
         messagePage.clickCancel();
         Assert.assertTrue(verifyMessage(config.getResponse(0)));
-        close_browser();
+        //close_browser();
     }
-    @When("Send wrong trigger and confirm results")
+   @When("Send wrong trigger and confirm results")
     public void invalid_wrong_trigger() throws IOException, InterruptedException {
         homePage = PageFactory.initElements(driver, HomePage.class);
         messagePage = PageFactory.initElements(driver, MessagePage.class);
@@ -96,7 +99,7 @@ public class Test_request_cash_out extends BaseTest {
         messagePage.clickSave();
         messagePage.clickCancel();
         Assert.assertTrue(verifyMessage(config.getResponse(3)));
-        close_browser();
+       // close_browser();
     }
     boolean verifyMessage(String message) {
         homePage = PageFactory.initElements(driver, HomePage.class);

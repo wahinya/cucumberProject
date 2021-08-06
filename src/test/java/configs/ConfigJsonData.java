@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class ConfigJsonData {
     public String userData() throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new FileReader("src/main/java/testData/users.json"));
+        BufferedReader bufferedReader = new BufferedReader(new FileReader("src/test/java/testData/users.json"));
         String line = null;
         StringBuilder stringBuilder = new StringBuilder();
         while ((line = bufferedReader.readLine()) != null) {
@@ -29,8 +29,10 @@ public class ConfigJsonData {
         return (String) passwordArray.get(index);
     }
 
+    // This method fetches the message Json and convert it to java object
+
     public String messages() throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new FileReader("src/main/java/testData/messages.json"));
+        BufferedReader bufferedReader = new BufferedReader(new FileReader("src/test/java/testData/messages.json"));
         String line = null;
         StringBuilder stringBuilder = new StringBuilder();
         while ((line = bufferedReader.readLine()) != null) {
@@ -44,7 +46,6 @@ public class ConfigJsonData {
         JSONArray transportArray = JsonPath.read(messages, "$.message..transport");
         return (String) transportArray.get(index);
     }
-
     public String getContact(int index) throws IOException {
         String messages = messages();
         JSONArray contactArray = JsonPath.read(messages, "$.message..contact");
@@ -62,6 +63,7 @@ public class ConfigJsonData {
         JSONArray responseArray = JsonPath.read(messages, "$.message..response");
         return (String) responseArray.get(index);
     }
+
     public String getResponse2(int index) throws IOException {
         String messages = messages();
         JSONArray response2Array = JsonPath.read(messages, "$.message..response2");
