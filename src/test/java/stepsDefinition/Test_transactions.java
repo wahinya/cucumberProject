@@ -15,8 +15,8 @@ public class Test_transactions extends BaseTest{
     ConfigJsonData config = new ConfigJsonData();
     Test_request_cash_out test_request_cash_out = new Test_request_cash_out();
 
-    @When("Rafiki request a payment code")
-    public void requestPaymentCode() throws IOException, InterruptedException {
+    @When("actor1 request a payment code")
+    public void actor1RequestPaymentCode() throws IOException, InterruptedException {
         homePage = PageFactory.initElements(driver, HomePage.class);
         messagePage = PageFactory.initElements(driver, MessagePage.class);
         homePage.openNewMessagePage();
@@ -27,8 +27,8 @@ public class Test_transactions extends BaseTest{
         messagePage.clickSave();
         messagePage.clickCancel();
     }
-    @When("Retailer validate the code")
-    public void sendReceiveCode() throws IOException, InterruptedException {
+    @When("actor2 validate the code")
+    public void actor2SendReceiveCode() throws IOException, InterruptedException {
         homePage = PageFactory.initElements(driver, HomePage.class);
         String code = homePage.getActualMessage();
         homePage = PageFactory.initElements(driver, HomePage.class);
@@ -40,9 +40,39 @@ public class Test_transactions extends BaseTest{
         messagePage.clickSave();
         messagePage.clickCancel();
     }
-    @When("Confirm that Rafiki balance reduce")
-    public void checkTikoDecrease() throws IOException {
-        Assert.assertTrue(test_request_cash_out.verifyMessage2(config.getResponse2(5)));
-        test_request_cash_out.close_browser();
+    @When("business request a payment code")
+    public void businessRequestPaymentCode() throws IOException, InterruptedException {
+        homePage = PageFactory.initElements(driver, HomePage.class);
+        messagePage = PageFactory.initElements(driver, MessagePage.class);
+        homePage.openNewMessagePage();
+        messagePage.addTransport(config.getTransport(12));
+        messagePage.addContact(config.getContact(12));
+        messagePage.addTrigger(config.getTrigger(12));
+        Thread.sleep(200);
+        messagePage.clickSave();
+        messagePage.clickCancel();
+    }
+    @When("person validate the code")
+    public void personSendReceiveCode() throws IOException, InterruptedException {
+        homePage = PageFactory.initElements(driver, HomePage.class);
+        String code = homePage.getActualMessage();
+        homePage = PageFactory.initElements(driver, HomePage.class);
+        homePage.openNewMessagePage();
+        messagePage.addTransport(config.getTransport(13));
+        messagePage.addContact(config.getContact(13));
+        messagePage.addTrigger(code);
+        Thread.sleep(200);
+        messagePage.clickSave();
+        messagePage.clickCancel();
+    }
+    @When("confirm that person tiko miles balance reduce by 10")
+    public void checkPersonTikoMilesDecrease() throws IOException {
+        Assert.assertTrue(test_request_cash_out.verifyMessage(config.getResponse(13)));
+        // test_request_cash_out.close_browser();
+    }
+    @When("confirm that business tiko miles balance increase by 10")
+    public void checkBusinessTikoMilesIncrease() throws IOException {
+        Assert.assertTrue(test_request_cash_out.verifyMessage2(config.getResponse2(13)));
+       // test_request_cash_out.close_browser();
     }
 }

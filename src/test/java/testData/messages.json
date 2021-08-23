@@ -31,7 +31,7 @@
   {
     "transport": "9999",
     "contact": "+254733000001",
-    "trigger": "Pay 50",
+    "trigger": "Pay 10",
     "response": "",
     "response2": ""
   },
@@ -83,6 +83,35 @@
     "trigger": "",
     "response": "Success Message For Validator",
     "response2": "Success Validation Message For Code Owner"
+  },
+  {
+    "transport": "9999",
+    "contact": "+254725146670",
+    "trigger": "Payb 10",
+    "response": "",
+    "response2": ""
+  },
+  {
+    "transport": "9999",
+    "contact": "+254733000001",
+    "trigger": "",
+    "response": "81",
+    "response2": "210"
+  }
+,
+  {
+    "transport": "9999",
+    "contact": "+254733000001",
+    "trigger": "qarequest",
+    "response": "",
+    "response2": ""
+  },
+  {
+    "transport": "9999",
+    "contact": "+254725146670",
+    "trigger": "",
+    "response": "Congratulations! Your client has successfully validated a service.",
+    "response2": "Thanks Rafiki! MAB Validated successfully."
   }
 ]
 }

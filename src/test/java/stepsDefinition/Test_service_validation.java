@@ -16,6 +16,8 @@ public class Test_service_validation extends BaseTest {
     ConfigJsonData config = new ConfigJsonData();
     Test_request_cash_out test_request_cash_out = new Test_request_cash_out();
 
+
+    // missed call logic
     @When("Rafiki send a missed call through a transport to receive a code")
     public void rafiki_send_a_missed_call_through_a_transport_to_receive_a_code() throws IOException, InterruptedException {
             homePage = PageFactory.initElements(driver, HomePage.class);
@@ -41,6 +43,34 @@ public class Test_service_validation extends BaseTest {
         messagePage.clickSave();
         messagePage.clickCancel();
     }
+
+    // Request validate - logic
+    @When("Provider send a missed call through a transport to receive a code")
+    public void provider_send_a_requestvalidate_through_a_transport_to_receive_a_code() throws IOException, InterruptedException {
+        homePage = PageFactory.initElements(driver, HomePage.class);
+        messagePage = PageFactory.initElements(driver, MessagePage.class);
+        homePage.openNewMessagePage();
+        messagePage.addTransport(config.getTransport(14));
+        messagePage.addContact(config.getContact(14));
+        messagePage.addTrigger(config.getTrigger(14));
+        Thread.sleep(200);
+        messagePage.clickSave();
+        messagePage.clickCancel();
+    }
+    @Then("Rafiki validate the code")
+    public void rafiki_validate_the_code() throws IOException, InterruptedException {
+        homePage = PageFactory.initElements(driver, HomePage.class);
+        String code = homePage.getActualMessage();
+        homePage = PageFactory.initElements(driver, HomePage.class);
+        homePage.openNewMessagePage();
+        messagePage.addTransport(config.getTransport(15));
+        messagePage.addContact(config.getContact(15));
+        messagePage.addTrigger("validate"+" "+ code);
+        Thread.sleep(200);
+        messagePage.clickSave();
+        messagePage.clickCancel();
+    }
+
     @Then("Rafiki receive a success message")
     public void rafiki_receive_a_success_message() throws IOException {
         Assert.assertTrue(test_request_cash_out.verifyMessage2(config.getResponse2(7)));
