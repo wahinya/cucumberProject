@@ -58,14 +58,14 @@
   },
   {
     "transport": "9999",
-    "contact": "+25472222227",
-    "trigger": "4",
+    "contact": "+254733000001",
+    "trigger": "1",
     "response": "",
     "response2": ""
   },
   {
     "transport": "9999",
-    "contact": "+25472222227",
+    "contact": "+254733000001",
     "trigger": "no",
     "response": "",
     "response2":""
@@ -112,6 +112,13 @@
     "trigger": "",
     "response": "Congratulations! Your client has successfully validated a service.",
     "response2": "Thanks Rafiki! MAB Validated successfully."
+  },
+  {
+    "transport": "9999",
+    "contact": "+254733000001",
+    "trigger": "no",
+    "response": "Thank you for providing feedback about the service you have received. You have earned 5 TM.",
+    "response2":"Thank you for providing feedback about the service you have received. You have earned 5 TM."
   }
 ]
 }

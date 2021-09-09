@@ -4,12 +4,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.MessagePage;
-
 import java.io.IOException;
 
 public class Test_request_cash_out extends BaseTest {

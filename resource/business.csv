@@ -1,0 +1,2 @@
+"name","businessSalesforceId","locationSalesforceId","latitude","longitude","Category","subcategory","Address","discoverable","Opening Hours {JSON}","organisationSalesforceId"
+"Clinic Lola","0011x00001K8EMu","a0u1x000003na7z","","","Health Providers","Clinic","","FALSE","{""Monday"": [""08:30-14:00"", ""15:15-18:30""],""Tuesday"": [],""Wednesday"": [],""Thursday"": [],""Friday"": [],""Saturday"": [],""Sunday"": []}","0011x00001Hv4sf"

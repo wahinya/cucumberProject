@@ -4,4 +4,4 @@ Feature: Person To Person Transaction
     When User logs into mvc with valid email and password
     Then actor1 request a payment code
     And actor2 validate the code
-    And Confirm that Rafiki balance reduce
+    And confirm that person tiko miles balance reduce by 10
