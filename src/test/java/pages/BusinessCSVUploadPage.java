@@ -15,7 +15,7 @@ public class BusinessCSVUploadPage {
     WebElement actors;
     @FindBy(xpath = "//*[@id=\"main-navbar-items\"]/ul[1]/li[4]/ul/li[7]/a")
     WebElement businesses;
-    @FindBy(xpath = "/html/body/div/div[3]/a[2]/span")
+    @FindBy(xpath = "/html/body/div/div[3]/a[3]")
     WebElement uploadUpsert;
 
     @FindBy(xpath = "//*[@id=\"businesses_file\"]")

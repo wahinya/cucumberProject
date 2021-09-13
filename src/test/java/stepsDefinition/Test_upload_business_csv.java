@@ -19,6 +19,6 @@ public class Test_upload_business_csv extends BaseTest {
     }
     @Then("upload a csv file")
     public void upload_a_csv_file() {
-    businessCSVUploadPage.saveUploadedCSV();
+    //businessCSVUploadPage.saveUploadedCSV();
     }
 }
