@@ -44,7 +44,7 @@
   },
   {
     "transport": "9999",
-    "contact": "+25472222226",
+    "contact": "+25472222227",
     "trigger": "qamissedcall",
     "response": "",
     "response2": ""
@@ -58,28 +58,28 @@
   },
   {
     "transport": "9999",
-    "contact": "+254733000001",
+    "contact": "+25472222227",
     "trigger": "1",
     "response": "",
     "response2": ""
   },
   {
     "transport": "9999",
-    "contact": "+254733000001",
+    "contact": "+25472222227",
     "trigger": "no",
     "response": "",
     "response2":""
   },
   {
     "transport": "9999",
-    "contact": "+25476666666",
+    "contact": "+25472222227",
     "trigger": "Enrolment",
     "response": "",
     "response2": ""
   },
   {
     "transport": "9999",
-    "contact": "+25476666667",
+    "contact": "+25472222227",
     "trigger": "",
     "response": "Success Message For Validator",
     "response2": "Success Validation Message For Code Owner"
@@ -93,7 +93,7 @@
   },
   {
     "transport": "9999",
-    "contact": "+254733000001",
+    "contact": "+25472222227",
     "trigger": "",
     "response": "81",
     "response2": "210"
@@ -101,7 +101,7 @@
 ,
   {
     "transport": "9999",
-    "contact": "+254733000001",
+    "contact": "+25472222227",
     "trigger": "qarequest",
     "response": "",
     "response2": ""
@@ -115,7 +115,7 @@
   },
   {
     "transport": "9999",
-    "contact": "+254733000001",
+    "contact": "+25472222227",
     "trigger": "no",
     "response": "Thank you for providing feedback about the service you have received. You have earned 5 TM.",
     "response2":"Thank you for providing feedback about the service you have received. You have earned 5 TM."

@@ -17,6 +17,7 @@ public class Test_service_validation extends BaseTest {
     Test_request_cash_out test_request_cash_out = new Test_request_cash_out();
 
     // missed call logic
+
     @When("Rafiki send a missed call through a transport to receive a code")
     public void rafiki_send_a_missed_call_through_a_transport_to_receive_a_code() throws IOException, InterruptedException {
             homePage = PageFactory.initElements(driver, HomePage.class);
@@ -43,7 +44,9 @@ public class Test_service_validation extends BaseTest {
         messagePage.clickCancel();
     }
 
+
     // Request validate - logic
+
     @When("Provider send a request through a transport to receive a code")
     public void provider_send_a_requestvalidate_through_a_transport_to_receive_a_code() throws IOException, InterruptedException {
         homePage = PageFactory.initElements(driver, HomePage.class);
@@ -82,7 +85,7 @@ public class Test_service_validation extends BaseTest {
     public void rafiki_rate_the_service() throws IOException, InterruptedException {
         homePage = PageFactory.initElements(driver, HomePage.class);
         messagePage = PageFactory.initElements(driver, MessagePage.class);
-        Thread.sleep(10000);
+        Thread.sleep(5000);
         homePage.openNewMessagePage();
         messagePage.addTransport(config.getTransport(8));
         messagePage.addContact(config.getContact(8));
