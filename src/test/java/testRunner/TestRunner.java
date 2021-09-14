@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "/Users/duncan/IdeaProjects/movercado-frontend-tests/Features/13_servicevalidation_tikocard_ratingPQ_credit.feature",
+        features = "/Users/duncan/IdeaProjects/movercado-frontend-tests/Features/14_uploading_csv.feature",
         glue = "stepsDefinition",
         publish=true
 )

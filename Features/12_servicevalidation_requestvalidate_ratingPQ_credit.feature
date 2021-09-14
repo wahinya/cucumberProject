@@ -22,5 +22,4 @@ Feature: Service validation through request
     And Service provider receive a success message
     When Rafiki rate the service
     And Rafiki answer the first question
-    And Rafiki answer last question
     Then Rafiki receives 5 tiko miles success message
