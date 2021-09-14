@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "/Users/duncan/IdeaProjects/movercado-frontend-tests/Features/14_uploading_csv.feature",
+        features = "/Users/duncan/IdeaProjects/movercado-frontend-tests/Features/14_uploading_csv_invalid_businessType.feature",
         glue = "stepsDefinition",
         publish=true
 )

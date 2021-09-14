@@ -1,0 +1,2 @@
+name,salesforceId,locationSalesforceId,latitude,longitude,type,subType,address,discoverable,openingHours
+Getrude-Test1,0011x00001K8ENu,a0u1x000003na7z,,,HealthProviders,Clinic,,FALSE,"{""Monday"": [""08:30-14:00"", ""15:15-18:30""],""Tuesday"": [],""Wednesday"": [],""Thursday"": [],""Friday"": [],""Saturday"": [],""Sunday"": []}"
