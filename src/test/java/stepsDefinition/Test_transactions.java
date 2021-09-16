@@ -27,6 +27,20 @@ public class Test_transactions extends BaseTest{
         messagePage.clickSave();
         messagePage.clickCancel();
     }
+
+    @When("actor with zero miles request a payment code")
+    public void actorWithZeroMilesRequestPaymentCode() throws IOException, InterruptedException {
+        homePage = PageFactory.initElements(driver, HomePage.class);
+        messagePage = PageFactory.initElements(driver, MessagePage.class);
+        homePage.openNewMessagePage();
+        messagePage.addTransport(config.getTransport(17));
+        messagePage.addContact(config.getContact(17));
+        messagePage.addTrigger(config.getTrigger(17));
+        Thread.sleep(200);
+        messagePage.clickSave();
+        messagePage.clickCancel();
+    }
+
     @When("actor2 validate the code")
     public void actor2SendReceiveCode() throws IOException, InterruptedException {
         homePage = PageFactory.initElements(driver, HomePage.class);
@@ -74,5 +88,10 @@ public class Test_transactions extends BaseTest{
     public void checkBusinessTikoMilesIncrease() throws IOException {
         Assert.assertTrue(test_request_cash_out.verifyMessage2(config.getResponse2(13)));
        // test_request_cash_out.close_browser();
+    }
+    @When("confirm the result")
+    public void checkErrorMessage() throws IOException {
+        Assert.assertTrue(test_request_cash_out.verifyMessage(config.getResponse(13)));
+        // test_request_cash_out.close_browser();
     }
 }

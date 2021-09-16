@@ -120,5 +120,13 @@
     "response": "Thank you for providing feedback about the service you have received. You have earned 5 TM.",
     "response2":"Thank you for providing feedback about the service you have received. You have earned 5 TM."
   }
+,
+  {
+    "transport": "9999",
+    "contact": "+25474400400",
+    "trigger": "Pay 10",
+    "response": "",
+    "response2": ""
+  }
 ]
 }
