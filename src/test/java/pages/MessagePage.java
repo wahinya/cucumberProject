@@ -5,10 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class MessagePage {
-    private WebDriver driver;
 
     public MessagePage(WebDriver driver) {
-        this.driver= driver;
     }
 
     // Message page locators

@@ -2,6 +2,7 @@
 /Users/duncan/IdeaProjects/movercado-frontend-tests/src/test/java/stepsDefinition/Test_upload_business_csv.java
 /Users/duncan/IdeaProjects/movercado-frontend-tests/src/test/java/stepsDefinition/BaseTest.java
 /Users/duncan/IdeaProjects/movercado-frontend-tests/src/test/java/stepsDefinition/Test_transactions.java
+/Users/duncan/IdeaProjects/movercado-frontend-tests/src/test/java/pages/InteractionPage.java
 /Users/duncan/IdeaProjects/movercado-frontend-tests/src/test/java/configs/ConfigJsonData.java
 /Users/duncan/IdeaProjects/movercado-frontend-tests/src/test/java/pages/HomePage.java
 /Users/duncan/IdeaProjects/movercado-frontend-tests/src/test/java/pages/TransactionPage.java
@@ -13,4 +14,5 @@
 /Users/duncan/IdeaProjects/movercado-frontend-tests/src/test/java/testRunner/TestRunner.java
 /Users/duncan/IdeaProjects/movercado-frontend-tests/src/test/java/stepsDefinition/Test_approve_cash_out.java
 /Users/duncan/IdeaProjects/movercado-frontend-tests/src/test/java/pages/RequestsPage.java
+/Users/duncan/IdeaProjects/movercado-frontend-tests/src/test/java/stepsDefinition/Test_add_interaction.java
 /Users/duncan/IdeaProjects/movercado-frontend-tests/src/test/java/pages/BusinessCSVUploadPage.java

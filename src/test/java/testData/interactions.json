@@ -1,0 +1,9 @@
+{
+  "interaction":[
+    {
+      "name": "TI2",
+      "description": "test interaction",
+      "success": "Interaction was successfully created."
+    }
+  ]
+}

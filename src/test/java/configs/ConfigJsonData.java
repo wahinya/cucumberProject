@@ -69,4 +69,46 @@ public class ConfigJsonData {
         JSONArray response2Array = JsonPath.read(messages, "$.message..response2");
         return (String) response2Array.get(index);
     }
+
+    // This method fetches the interaction data
+        public String interactionData() throws IOException {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("src/test/java/testData/interactions.json"));
+            String line = null;
+            StringBuilder stringBuilder = new StringBuilder();
+            while ((line = bufferedReader.readLine()) != null) {
+                stringBuilder.append(line);
+            }
+            return stringBuilder.toString();
+        }
+    public String interactionName(int index) throws IOException {
+        String interactionData = interactionData();
+        JSONArray interactionNameArray = JsonPath.read(interactionData, "$.interaction..name");
+        return (String) interactionNameArray.get(index);
+    }
+    public String interactionDescription(int index) throws IOException {
+        String interactionData = interactionData();
+        JSONArray interactionNameArray = JsonPath.read(interactionData, "$.interaction..description");
+        return (String) interactionNameArray.get(index);
+    }
+    public String getSuccess(int index) throws IOException {
+        String interactionData = interactionData();
+        JSONArray interactionArray = JsonPath.read(interactionData, "$.interaction..success");
+        return (String) interactionArray.get(index);
+    }
+
+    // This method fetches the projects data
+    public String projectData() throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new FileReader("src/test/java/testData/projects.json"));
+        String line = null;
+        StringBuilder stringBuilder = new StringBuilder();
+        while ((line = bufferedReader.readLine()) != null) {
+            stringBuilder.append(line);
+        }
+        return stringBuilder.toString();
+    }
+    public String projectName(int index) throws IOException {
+        String projectData = projectData();
+        JSONArray projectNameArray = JsonPath.read(projectData, "$.projectData..projectName");
+        return (String) projectNameArray.get(index);
+    }
 }

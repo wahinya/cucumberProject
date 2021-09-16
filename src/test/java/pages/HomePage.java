@@ -26,6 +26,15 @@ public class HomePage {
     @FindBy(xpath = "/html/body/div/div[3]/a[1]")
     WebElement newTransaction;
 
+    // interaction page locators
+    @FindBy(xpath = "/html/body/div/div[3]/a")
+    WebElement newInteractionBtn;
+
+    public void openNewInteractionPage(){
+        newInteractionBtn.click();
+        InteractionPage interactionPage = new InteractionPage(driver);
+    }
+
     public void openNewMessagePage(){
       messagesLink.click();
       newMessage.click();

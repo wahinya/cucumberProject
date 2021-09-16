@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "/Users/duncan/IdeaProjects/movercado-frontend-tests/Features/07_transaction_person_to_person_zero_miles.feature",
+        features = "/Users/duncan/IdeaProjects/movercado-frontend-tests/Features/00_create_interaction.feature",
         glue = "stepsDefinition",
         publish=true
 )

@@ -34,7 +34,6 @@ public class Test_service_validation extends BaseTest {
     public void service_provider_validate_the_code() throws IOException, InterruptedException {
         homePage = PageFactory.initElements(driver, HomePage.class);
         String code = homePage.getActualMessage();
-        homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.openNewMessagePage();
         messagePage.addTransport(config.getTransport(7));
         messagePage.addContact(config.getContact(7));

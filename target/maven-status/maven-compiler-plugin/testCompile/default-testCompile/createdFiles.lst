@@ -1,5 +1,6 @@
 stepsDefinition/Test_service_validation.class
 stepsDefinition/Test_request_cash_out.class
+stepsDefinition/Test_add_interaction.class
 pages/HomePage.class
 testRunner/TestRunner.class
 pages/MessagePage.class
@@ -11,4 +12,5 @@ stepsDefinition/Test_referral.class
 stepsDefinition/Test_transactions.class
 stepsDefinition/Test_download_cash_out.class
 pages/RequestsPage.class
+pages/InteractionPage.class
 pages/LoginPage.class
